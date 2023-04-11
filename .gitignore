@@ -131,7 +131,6 @@ dmypy.json
 
 # # # ------------------AI_Model_Cards_Assignment------------------ # # #
 *.hdf5
-*.h5
 logs/
 .vscode/
 __pycache__

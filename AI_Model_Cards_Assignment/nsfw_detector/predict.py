@@ -51,7 +51,7 @@ def load_images(image_paths, image_size, verbose=True):
 
 def load_model(model_path):
     if model_path is None or not exists(model_path):
-    	raise ValueError("saved_model_path must be the valid directory of a saved model to load.")
+        raise ValueError("saved_model_path must be the valid directory of a saved model to load.")
     
     model = tf.keras.models.load_model(model_path, custom_objects={'KerasLayer': hub.KerasLayer},compile=False)
     return model
@@ -109,7 +109,7 @@ def main(args=None):
         config = vars(parser.parse_args())
 
     if config['image_source'] is None or not exists(config['image_source']):
-    	raise ValueError("image_source must be a valid directory with images or a single image to classify.")
+        raise ValueError("image_source must be a valid directory with images or a single image to classify.")
     
     model = load_model(config['saved_model_path'])    
     image_preds = classify(model, config['image_source'], config['image_dim'])
